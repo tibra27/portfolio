@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Main from './Main';
+import { useNavigate } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+let portfolio_json = require('./data/portfolio_json_template.json')
+portfolio_json = portfolio_json.portfolio;
 root.render(
   <React.StrictMode>
-    <App />
+    <Main value={portfolio_json}/>
   </React.StrictMode>
 );
 

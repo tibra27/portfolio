@@ -1,0 +1,18 @@
+{
+    "portfolio" : {
+        "firstname": "Abhishek",
+        "lastname": "Tibrewal",
+        "middlename": "", 
+        "personalinfo": {
+
+        },
+        "headerinfo":{
+            "designationinfo":{
+                "jobtitle": "Associate Software Developer",
+                "currentcompany": "Oracle"
+            },
+            "extraheader": "Computer Science Graduate"
+        },
+        "usericon": "abhishek.png"
+    }
+}

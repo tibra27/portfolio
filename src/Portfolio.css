@@ -1,0 +1,46 @@
+.Portfolio{
+    height: 100vmin;
+}
+.Portfolio-logo {
+    height: 50vmin;
+    width: 50vmin;
+    pointer-events: none;
+    /* margin-top: 25vmin; */
+
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Portfolio-logo {
+      /* animation: Portfolio-logo-translate infinite 3s linear;
+      animation-direction: alternate; */
+    }
+  }
+  @keyframes Portfolio-logo-translate {
+    0% {
+      transform: scale(0.3,0.3) translateY(-100%);
+    }
+    50% {
+        transform: scale(0.4,0.4) translateY(0%);
+      }
+    100% {
+      transform: scale(0.3,0.3) translateY(100%);
+    }
+  }
+ 
+  .custom-rule{
+    width: 1px;
+    background-color: bisque;
+    height: 80vmin;
+    margin-top: 5.5vmin;
+    padding: 0;
+    margin-left: -1px;
+  }
+  .custom-rule-hr{
+   
+    background-color: bisque;
+    height: 1px;
+    padding: 0;
+    margin-top: -1px;
+    width: 75%;
+    margin-left: 12.5%;
+  }
