@@ -43,6 +43,73 @@
                 ]
             }
         ],
+        "skills":[
+            {
+                "name":"Java",
+                "comments":"",
+                "selfrating":"4.5/5"
+            },
+            {
+                "name":"Python",
+                "comments":"",
+                "selfrating":"4.5/5"
+            },
+            {
+                "name":"JavaScript",
+                "comments":"",
+                "selfrating":"4.5/5"
+            },
+            {
+                "name":"RESTful WebServices",
+                "comments":"",
+                "selfrating":"4/5"
+            },
+            {
+                "name":"Spring Boot",
+                "comments":"",
+                "selfrating":"4/5"
+            },
+            {
+                "name":"HTML",
+                "comments":"",
+                "selfrating":"4.5/5"
+            },
+            {
+                "name":"CSS",
+                "comments":"",
+                "selfrating":"4.5/5"
+            },
+            {
+                "name":"SQL",
+                "comments":"",
+                "selfrating":"4/5"
+            },
+            {
+                "name":"React.js",
+                "comments":"",
+                "selfrating":"3.5/5"
+            },
+            {
+                "name":"KnockoutJs",
+                "comments":"",
+                "selfrating":"4.5/5"
+            },
+            {
+                "name":"OJET",
+                "comments":"",
+                "selfrating":"4.5/5"
+            },
+            {
+                "name":"Natural Language Processing(NLP)",
+                "comments":"",
+                "selfrating":"3.5/5"
+            },
+            {
+                "name":"Deep Learning",
+                "comments":"",
+                "selfrating":"3/5"
+            }
+        ],
         "usericon": "abhishek.png",
         "relatedlinksrequired": true,
         "relatedlinksdetail":[

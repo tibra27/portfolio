@@ -39,6 +39,18 @@ class Detail extends React.Component {
             
         );
       }
+      this.skillsArray = [];
+        for(var i=0; i<this.portfolio_json.skills.length; i++){
+            this.skillsArray.push(
+                <div key={'skill_'+i} className="card shadow m-3 ms-0 col-md-2 experience-div">
+                    <div className="card-body">
+                        <h5 className="card-title">{this.portfolio_json.skills[i].name}</h5>
+                        <h6 className="card-subtitle mb-2 text-muted">{this.portfolio_json.skills[i].selfrating}</h6>
+                        <p className="card-text">{this.portfolio_json.skills[i].comments}</p>
+                    </div>
+                </div>
+            );
+        }
     };
     
     componentDidMount() {
@@ -136,6 +148,10 @@ class Detail extends React.Component {
      
       </section>
       <section id="skills-section" className="row container-fluid">
+      <h2>My Skills</h2>
+      <div className='justify-content-center ps-5 row'>
+        {this.skillsArray}
+      </div>
       
       </section>
       <section id="projects-section" className="row container-fluid bg-light">
@@ -144,8 +160,13 @@ class Detail extends React.Component {
       <section id="education-section" className="row container-fluid">
       
       </section>
-      <section id="contact-section" className="row container-fluid bg-light">
-      
+      <section id="contact-section" className="row container-fluid bg-light p-0 m-0">
+      <div className='col-12 text-info text-center text-light bg-dark bg-gradient d-flex flex-column justify-content-md-center'>
+            <p>
+              Copyright © 2022 &nbsp;
+              {this.portfolio_json.firstname + ' ' + this.portfolio_json.middlename + ' ' + this.portfolio_json.lastname}
+            </p>
+        </div>
       </section>
       </div>
      );
