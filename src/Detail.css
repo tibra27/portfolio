@@ -1,0 +1,18 @@
+.custom-rule-hr-detail{
+   
+    height: 2px;
+    padding: 0;
+    margin-top: -1px;
+    width: 75%;
+    margin-left: 12.5%;
+  }
+  .section-top{
+      margin-top: 6rem;
+  }
+  .Portfolio-logo-detail {
+    /* height: 50vmin; */
+    width: 50vmin;
+    pointer-events: none;
+    /* margin-top: 25vmin; */
+
+  }

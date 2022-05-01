@@ -1,13 +1,19 @@
 import './Portfolio.css';
+import AssociatedLinks from './AssociatedLinks';
 
 function Portfolio(props) {
     let portfolio_json = props.value.value;
     let userface = require('./images/'+portfolio_json.usericon)
   return (
-    <div className="Portfolio container bg-dark">
+    <div className="Portfolio container-fluid bg-black">
     <div className="row" style={{height:"100%"}}>
         <div className='col-md-6 bg-dark text-center text-info text-center d-flex flex-column justify-content-center'>
-        <div><img src={userface} className="Portfolio-logo rounded border border-3 border-light rounded-circle img-fluid" alt={portfolio_json.firstname} /></div>
+        <div className='col-12'><img src={userface} className="Portfolio-logo rounded border border-3 border-light rounded-circle img-fluid" alt={portfolio_json.firstname} /></div>
+
+            {/* <div className='col-12 d-flex justify-content-around'>
+            <AssociatedLinks value={portfolio_json}/>
+            </div> */}
+   
         </div>
         <div className='col-md-1  custom-rule d-sm-none d-md-block'>
         </div>
@@ -16,13 +22,13 @@ function Portfolio(props) {
         <div className='col-md-6 bg-black text-info text-center d-flex flex-column justify-content-md-center justify-content-sm-start'>
             <h3><small className="text-warning">I'm</small> </h3>
             <div className='fs-1'>{portfolio_json.firstname + ' ' + portfolio_json.middlename + ' ' + portfolio_json.lastname}</div>
-            <div className='fs-4 text-muted'>{portfolio_json.headerinfo.designationinfo.jobtitle + ' @ ' + portfolio_json.headerinfo.designationinfo.currentcompany}</div>
+            <div className='fs-4 text-muted font-monospace'>{portfolio_json.headerinfo.designationinfo.jobtitle + ' @ ' + portfolio_json.headerinfo.designationinfo.currentcompany}</div>
             <div className='col-12 row mt-5 mb-3'>
                 <div className='col-2'></div>
                 <div className='col-8 align-self-center'>
                 Have a look on my work profile, who I am, and what I do(did) &#128522;
                 </div>
-                <div className='col-1'>
+                <div className='col-1 align-self-center'>
                     <button type="button" onClick={props.onClick} className="btn btn-outline-warning">
                     <span className="fas fa-circle-chevron-right float-end lh-base">
                     </span>
