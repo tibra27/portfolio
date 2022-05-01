@@ -15,8 +15,33 @@
         },
         "aboutme":[
             "I am Computer Science Graduate(2016-2020 batch) from Malaviya National Institute of Technology(MNIT, Jaipur), India. Currently I am working as Full Stack Developer for Oracle Financial Services Software(OFSS), India.",
-            "I have worked on many technologies like Microservices with SpringBoot, Flexible RESTful APIs, DevOps, Natural Language Processing, Deep Learning etc.",
+            "I am a fast learner and do faster development. I can(did) handle multiple tasks under pressure by help of my organised working. The good thing - which my team members always appreciate for :),  is my perfection in task finishing and development which is very less pron to bugs. I have worked on many technologies like Microservices with SpringBoot, Flexible RESTful APIs, DevOps, Natural Language Processing, Deep Learning etc.",
             "I belong to Jhunjhunu(Rajasthan) from where I completed my primary, secondary and senior secondary education."
+        ],
+        "experience":[
+            {
+                "designation":"Associate Software Developer",
+                "organisation": "Oracle Financial Services Software(OFSS)",
+                "durationdisplay":"Sept 2020 - Present . 1 Year 9 Months",
+                "joblocation": "Bangaluru, Karnataka, India",
+                "workexp":[
+                    "Maintaining the service provided to applications on Docker and Kubernetes.",
+                    "Dealing with job scheduling service for different applications at the same time, ensuring product's stability.",
+                    "Designed a few rich User Interfaces using OJET and refined the existing UI's to more rich and user friendly. The major difficulty was to make these UI faster and robust, which I successfully accompolished in very less span of time.",
+                    "Developed a user-friendly multi-label text classification web application in using NLP and Oracle JavaScript Extension Toolkit(OJET)."
+                ]
+            },
+            {
+                "designation":"Summer Intern",
+                "organisation": "Dreams InfoSoft Technology Pvt Ltd.",
+                "durationdisplay":"June 2020 - July 2020 . 2 Months",
+                "joblocation": "Jaipur, Rajasthan, India",
+                "workexp":[
+                    "Worked on Image preprocessing and Computer Vision for Real time Person identification and action recognition.",
+                    "Developed an Python GUI based attendence system by using conventional image processing methods for face detection and recognition.",
+                    "Worked on different time series forecasting methods(ARIMA, SARIMA, Prophet etc.) for sales forecasting."
+                ]
+            }
         ],
         "usericon": "abhishek.png",
         "relatedlinksrequired": true,

@@ -9,9 +9,38 @@ class Detail extends React.Component {
       this.userface = require('./images/'+this.portfolio_json.usericon);
       this.aboutmeparas = [];
       for(var i=0; i<this.portfolio_json.aboutme.length; i++){
-        this.aboutmeparas.push(<p className='fs-5'>{this.portfolio_json.aboutme[i]}</p>);
+        this.aboutmeparas.push(<p key={i} className='fs-5'>{this.portfolio_json.aboutme[i]}</p>);
+      }
+      this.experienceArray = [];
+      for(var i=0; i<this.portfolio_json.experience.length; i++){
+          let keyLearnings = [];
+          for(var j=0; j<this.portfolio_json.experience[i].workexp.length; j++){
+              keyLearnings.push(
+                  <li key={'work_'+i+j}>{this.portfolio_json.experience[i].workexp[j]}</li>
+              );
+          }
+        this.experienceArray.push(
+            <div key={'exp_'+i} className='border border-start col-12 rounded-3 shadow m-3 experience-div pt-2 pb-2'>
+            <span className='d-block fs-5 text-uppercase text-warning' style={{fontWeight: 600}}>{this.portfolio_json.experience[i].organisation}</span>
+            <span className='d-block fs-6 text-muted'>
+            <span className='fas fa-id-badge me-2'></span>
+            {this.portfolio_json.experience[i].designation}</span>
+            <span className='d-block fs-6 text-muted'>
+            <span className='fas fa-business-time me-2'></span>
+            {this.portfolio_json.experience[i].durationdisplay}</span>
+            <span className='d-block fs-6 text-muted'>
+            <span className='fas fa-location-dot me-2'></span>
+            {this.portfolio_json.experience[i].joblocation}</span>
+            <h6 className='mt-2'>Work Experience and Key Learnings</h6>
+            <ul>
+                {keyLearnings}
+            </ul>
+            </div>
+            
+        );
       }
     };
+    
     componentDidMount() {
         $(window).scroll(function () {
             var distance = $(window).scrollTop();
@@ -100,19 +129,22 @@ class Detail extends React.Component {
             </div>
         </div>
       </section>
-      <section id="experience-section" className="row container-fluid p-0 m-0 bg-light">
+      <section id="experience-section" className="row container-fluid bg-light">
+      
+      <h2>Experience</h2>
+        {this.experienceArray}
+     
+      </section>
+      <section id="skills-section" className="row container-fluid">
       
       </section>
-      <section id="skills-section" className="row container-fluid p-0 m-0">
+      <section id="projects-section" className="row container-fluid bg-light">
       
       </section>
-      <section id="projects-section" className="row container-fluid p-0 m-0 bg-light">
+      <section id="education-section" className="row container-fluid">
       
       </section>
-      <section id="education-section" className="row container-fluid p-0 m-0">
-      
-      </section>
-      <section id="contact-section" className="row container-fluid p-0 m-0 bg-light">
+      <section id="contact-section" className="row container-fluid bg-light">
       
       </section>
       </div>
