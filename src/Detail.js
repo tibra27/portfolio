@@ -6,6 +6,7 @@ class Detail extends React.Component {
     constructor(props){
       super(props);
       this.portfolio_json = props.value.value;
+      this.onClickFn = props.onClick;
       this.userface = require('./images/'+this.portfolio_json.usericon);
       this.aboutmeparas = [];
       for(var i=0; i<this.portfolio_json.aboutme.length; i++){
@@ -59,7 +60,7 @@ class Detail extends React.Component {
             $('section').each(function (i) {
 
                 if ($(this).position().top 
-                    <= distance + 250) {
+                    <= distance + 450) {
                       
                         $('.navbar-nav a.active')
                             .removeClass('active');
@@ -75,7 +76,7 @@ class Detail extends React.Component {
         <div className="Portfolio container-fluid p-0">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top bg-opacity-75">
         <div className="container-fluid">
-          <a className="navbar-brand fa-2x text-warning text-uppercase" href="#">
+          <a className="navbar-brand fa-2x text-warning text-uppercase" href="#" onClick={this.onClickFn}>
           {this.portfolio_json.firstname}</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -162,7 +163,35 @@ class Detail extends React.Component {
       </section>
       <section id="contact-section" className="row container-fluid bg-light p-0 m-0">
       <div className='col-12 text-info text-center text-light bg-dark bg-gradient d-flex flex-column justify-content-md-center'>
+        <h2 className='mb-4'>Contact me</h2>
             <p>
+                <a className='text-white' href={'mailto:' + this.portfolio_json.contactinfo.email}>
+                    <span className='fas fa-envelope me-2 text-info'></span>
+                    <span>{this.portfolio_json.contactinfo.email}</span>
+                </a>
+            </p>
+            <p className='mt-1'>
+                <a className='text-white' href={'tel:' + this.portfolio_json.contactinfo.phoneno}>
+                    <span className='fas fa-phone me-2 text-info'></span>
+                    <span>{this.portfolio_json.contactinfo.phoneno}</span>
+                </a>
+            </p>
+            <div className='m-5'>
+               
+                <a className='text-info fs-2 m-3' href={this.portfolio_json.contactinfo.linkedin} target="_blank">
+                    <span className='fa-brands fa-linkedin'></span>
+                </a>
+                <a className='text-info fs-2 m-3' href={this.portfolio_json.contactinfo.github} target="_blank">
+                    <span className='fa-brands fa-github'></span>
+                </a>
+                <a className='text-info fs-2 m-3' href={this.portfolio_json.contactinfo.instagram} target="_blank">
+                    <span className='fa-brands fa-instagram'></span>
+                </a>
+                <a className='text-info fs-2 m-3' href={this.portfolio_json.contactinfo.facebook} target="_blank">
+                    <span className='fa-brands fa-facebook'></span>
+                </a>
+            </div>
+            <p className='mb-5'>
               Copyright © 2022 &nbsp;
               {this.portfolio_json.firstname + ' ' + this.portfolio_json.middlename + ' ' + this.portfolio_json.lastname}
             </p>
