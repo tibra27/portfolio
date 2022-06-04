@@ -110,6 +110,32 @@
                 "selfrating":"3/5"
             }
         ],
+        "education":[
+            {
+                "designation":"Bachelor of Technology, Computer Science and Engineering",
+                "organisation": "Malaviya National Institute of Technology, Jaipur",
+                "durationdisplay":"2016 - 2020",
+                "joblocation": "Jaipur, Rajasthan, India",
+                "grade":"8.87 CGPA",
+                "logo": "mnit_logo.jpg"
+            },
+            {
+                "designation":" Senior Secondary Education",
+                "organisation": "Jhunjhunu Academy Sr. Sec. School, Jhunjhunu",
+                "durationdisplay":"2014 - 2015",
+                "joblocation": "Jhunjhunu, Rajasthan, India",
+                "grade":"95.60%",
+                "logo": "jjn_academy.jpg"
+            },
+            {
+                "designation":"Secondary Education",
+                "organisation": "Keshav Adarsh Vidya Mandir Sr. Sec. School, Jhunjhunu",
+                "durationdisplay":"2012 - 2013",
+                "joblocation": "Jhunjhunu, Rajasthan, India",
+                "grade":"91.50%",
+                "logo": "rss.png"
+            }
+        ],
         "usericon": "abhishek.png",
         "relatedlinksrequired": true,
         "relatedlinksdetail":[

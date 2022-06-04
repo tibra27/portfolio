@@ -19,3 +19,7 @@
   .experience-div{
     border-left: 3px solid #ffc107!important;
   }
+  .nav-link.active{
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-warning-rgb),var(--bs-text-opacity))!important;
+  }

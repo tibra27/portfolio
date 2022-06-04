@@ -38,7 +38,35 @@ class Detail extends React.Component {
             </ul>
             </div>
             
-        );
+        ); 
+      }
+      this.educationArray = [];
+      for(var i=0; i<this.portfolio_json.education.length; i++){
+        let logo = require('./images/'+this.portfolio_json.education[i].logo);
+        this.educationArray.push(
+          
+          <div key={'edu_'+i} className='border d-flex flex-row border-start col-12 rounded-3 shadow m-3 experience-div pt-2 pb-2'>
+          <div key={'edu_img_'+i} className="d-inline me-2 mt-2">
+          <img src={logo} width="48" height="48" alt={this.portfolio_json.education[i].organisation} title={this.portfolio_json.education[i].organisation}/>
+          </div>
+          <div key={'edu_content_'+i}>
+          <span className='d-block fs-5 text-uppercase text-warning' style={{fontWeight: 600}}>{this.portfolio_json.education[i].organisation}</span>
+          <span className='d-block fs-6 text-muted'>
+          <span className='fas fa-id-badge me-2'></span>
+          {this.portfolio_json.education[i].designation}</span>
+          <span className='d-block fs-6 text-muted'>
+          <span className='fas fa-business-time me-2'></span>
+          {this.portfolio_json.education[i].durationdisplay}</span>
+          <span className='d-block fs-6 text-muted'>
+          <span className='fas fa-location-dot me-2'></span>
+          {this.portfolio_json.education[i].joblocation}</span>
+          <span className='d-block fs-6 text-muted'>
+          <span className='fas fa-square-poll-vertical me-2'></span>
+          {this.portfolio_json.education[i].grade}</span>
+          </div>
+          </div>
+          
+      );
       }
       this.skillsArray = [];
         for(var i=0; i<this.portfolio_json.skills.length; i++){
@@ -156,22 +184,23 @@ class Detail extends React.Component {
       
       </section>
       <section id="projects-section" className="row container-fluid bg-light">
-      
+      <h2 className='mb-4'>Projects</h2>
       </section>
       <section id="education-section" className="row container-fluid">
-      
+      <h2 className='mb-4'>Education</h2>
+      {this.educationArray}
       </section>
       <section id="contact-section" className="row container-fluid bg-light p-0 m-0">
       <div className='col-12 text-info text-center text-light bg-dark bg-gradient d-flex flex-column justify-content-md-center'>
         <h2 className='mb-4'>Contact me</h2>
             <p>
-                <a className='text-white' href={'mailto:' + this.portfolio_json.contactinfo.email}>
+                <a className='text-white text-decoration-none' href={'mailto:' + this.portfolio_json.contactinfo.email}>
                     <span className='fas fa-envelope me-2 text-info'></span>
                     <span>{this.portfolio_json.contactinfo.email}</span>
                 </a>
             </p>
             <p className='mt-1'>
-                <a className='text-white' href={'tel:' + this.portfolio_json.contactinfo.phoneno}>
+                <a className='text-white text-decoration-none' href={'tel:' + this.portfolio_json.contactinfo.phoneno}>
                     <span className='fas fa-phone me-2 text-info'></span>
                     <span>{this.portfolio_json.contactinfo.phoneno}</span>
                 </a>
