@@ -27,7 +27,7 @@ function Portfolio(props) {
             <div className='col-12 row mt-5 mb-3'>
                 <div className='col-2'></div>
                 <div className='col-8 align-self-center'>
-                Have a look on my work profile, who I am, and what I do(did) &#128522;
+                Have a look on my work profile, who I am, and what I do &#128522;
                 </div>
                 <div className='col-1 align-self-center'>
                     <button type="button" onClick={props.onClick} className="btn btn-outline-warning">
