@@ -20,8 +20,13 @@ class Detail extends React.Component {
                   <li key={'work_'+i+j}>{this.portfolio_json.experience[i].workexp[j]}</li>
               );
           }
+          let logo = require('./images/'+this.portfolio_json.experience[i].logo);
         this.experienceArray.push(
-            <div key={'exp_'+i} className='border border-start col-12 rounded-3 shadow m-3 experience-div pt-2 pb-2'>
+            <div key={'exp_'+i} className='border  d-flex flex-row border-start col-12 rounded-3 shadow m-3 experience-div pt-2 pb-2'>
+            <div key={'exp_img_'+i} className="d-inline me-2 mt-2">
+          <img src={logo} width="48" height="48" alt={this.portfolio_json.experience[i].organisation} title={this.portfolio_json.experience[i].organisation}/>
+          </div>
+          <div key={'exp_content_'+i}>
             <span className='d-block fs-5 text-uppercase text-warning' style={{fontWeight: 600}}>{this.portfolio_json.experience[i].organisation}</span>
             <span className='d-block fs-6 text-muted'>
             <span className='fas fa-id-badge me-2'></span>
@@ -36,6 +41,7 @@ class Detail extends React.Component {
             <ul>
                 {keyLearnings}
             </ul>
+            </div>
             </div>
             
         ); 
@@ -200,8 +206,12 @@ class Detail extends React.Component {
                 </a>
             </p>
             <p className='mt-1'>
-                <a className='text-white text-decoration-none' href={'tel:' + this.portfolio_json.contactinfo.phoneno}>
+                <a className='text-white text-decoration-none me-2' href={'tel:' + this.portfolio_json.contactinfo.phoneno}>
                     <span className='fas fa-phone me-2 text-info'></span>
+                    <span>{this.portfolio_json.contactinfo.phoneno}</span>
+                </a>
+                <a className='text-white text-decoration-none' href={'tel:' + this.portfolio_json.contactinfo.phoneno}>
+                    <span className='fa-brands fa-whatsapp me-2 text-info'></span>
                     <span>{this.portfolio_json.contactinfo.phoneno}</span>
                 </a>
             </p>

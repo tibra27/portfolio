@@ -29,7 +29,8 @@
                     "Stable Developmnet(Backend and Frontend): Dealing with job scheduling service for different applications at the same time, ensuring product's stability. Reduced tech-debt by resolving a high number of bugs and providing useful enhancements within existing service.",
                     "UI Developemnt: Designed a few rich User Interfaces using OJET and refined the existing UI's to more rich and user friendly. The major difficulty was to make these UI faster and robust, which I successfully accompolished in very less span of time.",
                     "NLP: Developed a user-friendly multi-label text classification web application using NLP concepts and Oracle JavaScript Extension Toolkit(OJET)."
-                ]
+                ],
+                "logo": "ofss_logo.jpg"
             },
             {
                 "designation":"Summer Intern",
@@ -40,7 +41,8 @@
                     "Worked on Image preprocessing and Computer Vision for Real time Person identification and action recognition.",
                     "Developed an Python GUI based attendence system by using conventional image processing methods for face detection and recognition.",
                     "Worked on different time series forecasting methods(ARIMA, SARIMA, Prophet etc.) for sales forecasting."
-                ]
+                ],
+                "logo": "dreamsoft_logo.jpg"
             }
         ],
         "skills":[

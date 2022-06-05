@@ -20,8 +20,9 @@ function Portfolio(props) {
         <div className='col-md-1  custom-rule-hr d-sm-block d-md-none'>
         </div>
         <div className='col-md-6 bg-black text-info text-center d-flex flex-column justify-content-md-center justify-content-sm-start'>
-            <h3><small className="text-warning">I'm</small> </h3>
-            <div className='fs-1'>{portfolio_json.firstname + ' ' + portfolio_json.middlename + ' ' + portfolio_json.lastname}</div>
+            <h3><small className="text-warning">WELCOME</small> </h3>
+            
+            <div className='fs-1'><span className="text-warning">I'm</span> {portfolio_json.firstname + ' ' + portfolio_json.middlename + ' ' + portfolio_json.lastname}</div>
             <div className='fs-4 text-muted font-monospace'>{portfolio_json.headerinfo.designationinfo.jobtitle + ' @ ' + portfolio_json.headerinfo.designationinfo.currentcompany}</div>
             <div className='col-12 row mt-5 mb-3'>
                 <div className='col-2'></div>
