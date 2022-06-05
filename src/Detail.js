@@ -48,6 +48,12 @@ class Detail extends React.Component {
       }
       this.educationArray = [];
       for(var i=0; i<this.portfolio_json.education.length; i++){
+        let achievements = [];
+          for(var j=0; j<this.portfolio_json.education[i].achievements.length; j++){
+            achievements.push(
+                  <li key={'work_'+i+j}>{this.portfolio_json.education[i].achievements[j]}</li>
+              );
+          }
         let logo = require('./images/'+this.portfolio_json.education[i].logo);
         this.educationArray.push(
           
@@ -69,6 +75,10 @@ class Detail extends React.Component {
           <span className='d-block fs-6 text-muted'>
           <span className='fas fa-square-poll-vertical me-2'></span>
           {this.portfolio_json.education[i].grade}</span>
+          <h6 className='mt-2'>Scholastic Achievements</h6>
+            <ul>
+                {achievements}
+            </ul>
           </div>
           </div>
           

@@ -119,7 +119,10 @@
                 "durationdisplay":"2016 - 2020",
                 "joblocation": "Jaipur, Rajasthan, India",
                 "grade":"8.87 CGPA",
-                "logo": "mnit_logo.jpg"
+                "logo": "mnit_logo.jpg",
+                "achievements":[
+                    "Secured 10 SGPA in 7th semester (July 2019-Dec 2019)."
+                ]
             },
             {
                 "designation":" Senior Secondary Education",
@@ -127,7 +130,11 @@
                 "durationdisplay":"2014 - 2015",
                 "joblocation": "Jhunjhunu, Rajasthan, India",
                 "grade":"95.60%",
-                "logo": "jjn_academy.jpg"
+                "logo": "jjn_academy.jpg",
+                "achievements":[
+                    "Secured 12th rank in State board and 8th rank in District board merit list of Senior Secondary Examination 2015.",
+                    "Achieved AIR-2291 in JEE-Mains 2016 and AIR-6010 in JEE-Advanced 2016."
+                ]
             },
             {
                 "designation":"Secondary Education",
@@ -135,7 +142,11 @@
                 "durationdisplay":"2012 - 2013",
                 "joblocation": "Jhunjhunu, Rajasthan, India",
                 "grade":"91.50%",
-                "logo": "rss.png"
+                "logo": "rss.png",
+                "achievements":[
+                    "School topper in Secondary Examination 2013.",
+                    "Achieved Laptop for being in top 0.01% students in merit list from Rajasthan Government."
+                ]
             }
         ],
         "usericon": "abhishek.png",
