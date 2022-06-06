@@ -127,6 +127,18 @@
                 "projectlink": "https://github.com/tibra27/portfolio/tree/master"
             },
             {
+                "projecttitle": "Speech 2 Text",
+                "subtitle": "Static Web UI",
+                "tags": [
+                    "Speech Recognition",
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ],
+                "description": "A server-based recognition engine in which I implemented speech to text functionality using SpeechRecognition API in javascript.",
+                "projectlink": "https://github.com/tibra27/SpeechRecognition"
+            },
+            {
                 "projecttitle": "Driver Drowsiness Detection",
                 "subtitle": "Deep Learning Project",
                 "tags": [
