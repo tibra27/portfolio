@@ -111,6 +111,45 @@
                 "selfrating":"3/5"
             }
         ],
+        "projects":[
+            {
+                "projecttitle": "Reusable Portfolio",
+                "subtitle": "Static Web UI",
+                "tags": [
+                    "ReactJS",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Bootstrap",
+                    "GIT"
+                ],
+                "description": "Basic portfolio UI which is a reusable template based web app, and can be reused just by changing the template and adding the required images.",
+                "projectlink": "https://github.com/tibra27/portfolio/tree/master"
+            },
+            {
+                "projecttitle": "Movie House",
+                "subtitle": "Desktop Application",
+                "tags": [
+                    "JavaFX",
+                    "MySQL",
+                    "DBMS"
+                ],
+                "description": "Movie House is a desktop application (Developed using JavaFX) on which user can purchase movies and watch them after buying.",
+                "projectlink": "https://github.com/tibra27/JAVAFX-MOVIE-HOUSE"
+            },
+            {
+                "projecttitle": "Training & Placement Management System",
+                "subtitle": "Web Application",
+                "tags": [
+                    "HTML",
+                    "CSS",
+                    "PHP",
+                    "DBMS","JavaScript","MySQL"
+                ],
+                "description": "Developed a web application for online training & placement management system for a college which can reduce most of the manual work of T&P cell of a college.",
+                "projectlink": "https://github.com/tibra27/Online-Placement-and-Training-Management-System"
+            }
+        ],
         "education":[
             {
                 "designation":"Bachelor of Technology, Computer Science and Engineering",

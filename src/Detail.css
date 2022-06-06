@@ -17,9 +17,27 @@
 
   }
   .experience-div{
+    border-left: 3px solid #0dcaf0!important;
+  }
+  .skills-div{
     border-left: 3px solid #ffc107!important;
   }
   .nav-link.active{
     --bs-text-opacity: 1;
     color: rgba(var(--bs-warning-rgb),var(--bs-text-opacity))!important;
+  }
+  .project-div{
+    border-left: 3px solid #0dcaf0!important;
+  }
+  .project-div:hover{
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+  }
+  .project-div:hover .card-text{
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-light-rgb),var(--bs-text-opacity))!important;
+  }
+  .project-div:hover .card-footer{
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
   }

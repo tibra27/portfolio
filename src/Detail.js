@@ -27,7 +27,7 @@ class Detail extends React.Component {
           <img src={logo} width="48" height="48" alt={this.portfolio_json.experience[i].organisation} title={this.portfolio_json.experience[i].organisation}/>
           </div>
           <div key={'exp_content_'+i}>
-            <span className='d-block fs-5 text-uppercase text-warning' style={{fontWeight: 600}}>{this.portfolio_json.experience[i].organisation}</span>
+            <span className='d-block fs-5 text-uppercase text-info' style={{fontWeight: 600}}>{this.portfolio_json.experience[i].organisation}</span>
             <span className='d-block fs-6 text-muted'>
             <span className='fas fa-id-badge me-2'></span>
             {this.portfolio_json.experience[i].designation}</span>
@@ -57,7 +57,7 @@ class Detail extends React.Component {
         let logo = require('./images/'+this.portfolio_json.education[i].logo);
         this.educationArray.push(
           
-          <div key={'edu_'+i} className='border d-flex flex-row border-start col-12 rounded-3 shadow m-3 experience-div pt-2 pb-2'>
+          <div key={'edu_'+i} className='border d-flex flex-row border-start col-12 rounded-3 shadow m-3 skills-div pt-2 pb-2'>
           <div key={'edu_img_'+i} className="d-inline me-2 mt-2">
           <img src={logo} width="48" height="48" alt={this.portfolio_json.education[i].organisation} title={this.portfolio_json.education[i].organisation}/>
           </div>
@@ -87,7 +87,7 @@ class Detail extends React.Component {
       this.skillsArray = [];
         for(var i=0; i<this.portfolio_json.skills.length; i++){
             this.skillsArray.push(
-                <div key={'skill_'+i} className="card shadow m-3 ms-0 col-md-2 experience-div">
+                <div key={'skill_'+i} className="card shadow m-3 ms-0 col-md-2 skills-div">
                     <div className="card-body">
                         <h5 className="card-title">{this.portfolio_json.skills[i].name}</h5>
                         <h6 className="card-subtitle mb-2 text-muted">{this.portfolio_json.skills[i].selfrating}</h6>
@@ -95,6 +95,36 @@ class Detail extends React.Component {
                     </div>
                 </div>
             );
+        }
+        this.projectArray = [];
+        for(var i=0; i<this.portfolio_json.projects.length; i++){
+          this.tags=[];
+          if(this.portfolio_json.projects[i].tags != undefined){
+            for(var j=0; j<this.portfolio_json.projects[i].tags.length; j++){
+              this.tags.push(
+                <span key={'tags_'+i+j} className="badge bg-primary ms-1 me-2 mb-1 badge-pill badge-info">{this.portfolio_json.projects[i].tags[j]}</span>
+              );
+            }
+          }
+          
+          this.projectArray.push(
+            <div key={'project_'+i} className="card text-center shadow m-3 col-md-3 project-div">
+             <div class="card-body">
+              <h5 className="card-title text-uppercase text-info">{this.portfolio_json.projects[i].projecttitle}</h5>
+              <h6 className="card-subtitle mb-2 text-muted">{this.portfolio_json.projects[i].subtitle}</h6>
+              <p className="card-text">{this.portfolio_json.projects[i].description}<a href={this.portfolio_json.projects[i].projectlink} target="_blank" title='View Project' className="card-link stretched-link">
+              <span className='fas fa-up-right-from-square ms-1'></span></a></p>
+              
+              </div>
+              <div className="card-footer bg-white">
+              
+              <div>
+                {this.tags}
+              </div>
+              
+              </div>
+            </div>
+        );
         }
     };
     
@@ -186,23 +216,27 @@ class Detail extends React.Component {
             </div>
         </div>
       </section>
-      <section id="experience-section" className="row container-fluid bg-light">
+      <section id="experience-section" className="row container-fluid bg-light m-0">
       
       <h2>Experience</h2>
         {this.experienceArray}
      
       </section>
-      <section id="skills-section" className="row container-fluid">
+      <section id="skills-section" className="row container-fluid m-0">
       <h2>My Skills</h2>
       <div className='justify-content-center ps-5 row'>
         {this.skillsArray}
       </div>
       
       </section>
-      <section id="projects-section" className="row container-fluid bg-light">
+      <section id="projects-section" className="row container-fluid bg-light m-0">
       <h2 className='mb-4'>Projects</h2>
+      <div className='justify-content-center row ps-4'>
+      
+      {this.projectArray}
+      </div>
       </section>
-      <section id="education-section" className="row container-fluid">
+      <section id="education-section" className="row container-fluid m-0">
       <h2 className='mb-4'>Education</h2>
       {this.educationArray}
       </section>
