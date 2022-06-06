@@ -127,6 +127,33 @@
                 "projectlink": "https://github.com/tibra27/portfolio/tree/master"
             },
             {
+                "projecttitle": "Driver Drowsiness Detection",
+                "subtitle": "Deep Learning Project",
+                "tags": [
+                    "Python",
+                    "Deep Learning",
+                    "PyTorch",
+                    "Feature Extraction",
+                    "Neural Networks",
+                    "LSTM"
+                ],
+                "description": "A deep learning-based project which aims to detect drowsiness of the driver at early stages. I proposed a CNN-LSTM architecture for this and worked on RLDD dataset.",
+                "projectlink": ""
+            },
+            {
+                "projecttitle": "Facial Attendance System",
+                "subtitle": "Computer Vision + Desktop Application",
+                "tags": [
+                    "Python",
+                    "MySQL",
+                    "Tkinter",
+                    "Face API",
+                    "Custom Vision"
+                ],
+                "description": "A real time attendance system based on the face detection and identification using Digital Image Processing and Database concepts.",
+                "projectlink": ""
+            },
+            {
                 "projecttitle": "Movie House",
                 "subtitle": "Desktop Application",
                 "tags": [

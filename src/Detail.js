@@ -112,7 +112,7 @@ class Detail extends React.Component {
              <div class="card-body">
               <h5 className="card-title text-uppercase text-info">{this.portfolio_json.projects[i].projecttitle}</h5>
               <h6 className="card-subtitle mb-2 text-muted">{this.portfolio_json.projects[i].subtitle}</h6>
-              <p className="card-text">{this.portfolio_json.projects[i].description}<a href={this.portfolio_json.projects[i].projectlink} target="_blank" title='View Project' className="card-link stretched-link">
+              <p className="card-text">{this.portfolio_json.projects[i].description}<a href={this.portfolio_json.projects[i].projectlink ? this.portfolio_json.projects[i].projectlink : undefined} style={this.portfolio_json.projects[i].projectlink==""?{display:'none'}:{}} target="_blank" title='View Project' className="card-link stretched-link">
               <span className='fas fa-up-right-from-square ms-1'></span></a></p>
               
               </div>
@@ -231,7 +231,7 @@ class Detail extends React.Component {
       </section>
       <section id="projects-section" className="row container-fluid bg-light m-0">
       <h2 className='mb-4'>Projects</h2>
-      <div className='d-flex justify-content-between row'>
+      <div className='d-flex justify-content-evenly row'>
       
       {this.projectArray}
       </div>
