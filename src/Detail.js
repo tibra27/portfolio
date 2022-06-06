@@ -231,7 +231,7 @@ class Detail extends React.Component {
       </section>
       <section id="projects-section" className="row container-fluid bg-light m-0">
       <h2 className='mb-4'>Projects</h2>
-      <div className='justify-content-center row ps-4'>
+      <div className='d-flex justify-content-between row'>
       
       {this.projectArray}
       </div>
