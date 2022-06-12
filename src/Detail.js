@@ -216,27 +216,27 @@ class Detail extends React.Component {
             </div>
         </div>
       </section>
-      <section id="experience-section" className="row container-fluid bg-light m-0">
+      <section id="experience-section" className="row container-fluid bg-light m-0 ps-0">
       
       <h2>Experience</h2>
         {this.experienceArray}
      
       </section>
-      <section id="skills-section" className="row container-fluid m-0">
+      <section id="skills-section" className="row container-fluid m-0 ps-0">
       <h2>My Skills</h2>
       <div className='justify-content-center ps-5 row'>
         {this.skillsArray}
       </div>
       
       </section>
-      <section id="projects-section" className="row container-fluid bg-light m-0">
+      <section id="projects-section" className="row container-fluid bg-light m-0 ps-0">
       <h2 className='mb-4'>Projects</h2>
-      <div className='d-flex justify-content-evenly row'>
+      <div className='d-flex justify-content-between justify-content-md-center row'>
       
       {this.projectArray}
       </div>
       </section>
-      <section id="education-section" className="row container-fluid m-0">
+      <section id="education-section" className="row container-fluid m-0 ps-0">
       <h2 className='mb-4'>Education</h2>
       {this.educationArray}
       </section>
