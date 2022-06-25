@@ -22,7 +22,7 @@
                 "designation":"Associate Software Developer",
                 "organisation": "Oracle Financial Services Software(OFSS)",
                 "durationdisplay":"Sept 2020 - Present . 1 Year 9 Months",
-                "joblocation": "Bangaluru, Karnataka, India",
+                "joblocation": "Bengaluru, Karnataka, India",
                 "workexp":[
                     "Working on DevOps: Maintaining the job scheduling service provided to applications in different flavors on Docker and Kubernetes.",
                     "Stable Developmnet(Backend and Frontend): Dealing with job scheduling service for different applications at the same time, ensuring product's stability. Reduced tech-debt by resolving a high number of bugs and providing useful enhancements within existing service.",
