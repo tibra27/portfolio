@@ -41,3 +41,9 @@
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
   }
+  .header-bottom-border{
+    border-radius: 1px;
+    height: 4px;
+    margin-top: -0.6rem;
+    width: 2rem;
+  }

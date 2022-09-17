@@ -14,11 +14,46 @@ class Detail extends React.Component {
       }
       this.experienceArray = [];
       for(var i=0; i<this.portfolio_json.experience.length; i++){
-          let keyLearnings = [];
-          for(var j=0; j<this.portfolio_json.experience[i].workexp.length; j++){
-              keyLearnings.push(
-                  <li key={'work_'+i+j}>{this.portfolio_json.experience[i].workexp[j]}</li>
+          
+          let workhistory = [];
+          for(var j=0; j<this.portfolio_json.experience[i].workhistory.length; j++){
+            let keyLearnings = [];
+            for(var k=0; k<this.portfolio_json.experience[i].workhistory[j].workexp.length; k++){
+                keyLearnings.push(
+                    <li key={'work_'+k+j+i}>{this.portfolio_json.experience[i].workhistory[j].workexp[k]}</li>
+                );
+            }
+            if(j>0){
+              workhistory.push(
+                <hr></hr>
               );
+            }
+            workhistory.push(
+                 <><span className='d-block fs-5 text-black'>
+                <span className='fas fa-id-badge me-2'></span>
+                {this.portfolio_json.experience[i].workhistory[j].designation}</span><span className='d-block fs-6 text-muted'>
+                  <span className='fas fa-business-time me-2'></span>
+                  {this.portfolio_json.experience[i].workhistory[j].durationdisplay}</span><span className='d-block fs-6 text-muted'>
+                  <span className='fas fa-location-dot me-2'></span>
+                  {this.portfolio_json.experience[i].workhistory[j].joblocation}</span>
+                  </>
+            );
+            if(this.portfolio_json.experience[i].workhistory[j].workexp.length > 0){
+              workhistory.push(
+                <><h6 className='mt-2'>Work Experience and Key Learnings</h6><ul>
+                  {keyLearnings}
+                </ul></>
+              );
+            }
+            
+          }
+          let totaldurationdisplay = [];
+          if(this.portfolio_json.experience[i].workhistory.length > 1){
+            totaldurationdisplay.push(
+              <span className='d-block fs-6 mb-1 text-muted'>
+                {this.portfolio_json.experience[i].totaldurationdisplay}
+              </span>
+            );
           }
           let logo = require('./images/'+this.portfolio_json.experience[i].logo);
         this.experienceArray.push(
@@ -28,19 +63,8 @@ class Detail extends React.Component {
           </div>
           <div key={'exp_content_'+i}>
             <span className='d-block fs-5 text-uppercase text-info' style={{fontWeight: 600}}>{this.portfolio_json.experience[i].organisation}</span>
-            <span className='d-block fs-6 text-muted'>
-            <span className='fas fa-id-badge me-2'></span>
-            {this.portfolio_json.experience[i].designation}</span>
-            <span className='d-block fs-6 text-muted'>
-            <span className='fas fa-business-time me-2'></span>
-            {this.portfolio_json.experience[i].durationdisplay}</span>
-            <span className='d-block fs-6 text-muted'>
-            <span className='fas fa-location-dot me-2'></span>
-            {this.portfolio_json.experience[i].joblocation}</span>
-            <h6 className='mt-2'>Work Experience and Key Learnings</h6>
-            <ul>
-                {keyLearnings}
-            </ul>
+            {totaldurationdisplay}
+            {workhistory}
             </div>
             </div>
             
@@ -90,7 +114,10 @@ class Detail extends React.Component {
                 <div key={'skill_'+i} className="card shadow m-3 ms-0 col-md-2 skills-div">
                     <div className="card-body">
                         <h5 className="card-title">{this.portfolio_json.skills[i].name}</h5>
-                        <h6 className="card-subtitle mb-2 text-muted">{this.portfolio_json.skills[i].selfrating}</h6>
+                        {/* <h6 className="card-subtitle mb-2 text-muted">{this.portfolio_json.skills[i].selfrating}</h6> */}
+                        <div className="progress">
+  <div className="progress-bar bg-warning progress-bar-striped" role="progressbar" style={{width: eval(this.portfolio_json.skills[i].selfrating)*100+'%'}} aria-valuenow={eval(this.portfolio_json.skills[i].selfrating)*100} aria-valuemin="0" aria-valuemax="100">{this.portfolio_json.skills[i].selfrating}</div>
+</div>
                         <p className="card-text">{this.portfolio_json.skills[i].comments}</p>
                     </div>
                 </div>
@@ -109,7 +136,7 @@ class Detail extends React.Component {
           
           this.projectArray.push(
             <div key={'project_'+i} className="card text-center shadow m-3 col-md-3 project-div">
-             <div class="card-body">
+             <div className="card-body">
               <h5 className="card-title text-uppercase text-info">{this.portfolio_json.projects[i].projecttitle}</h5>
               <h6 className="card-subtitle mb-2 text-muted">{this.portfolio_json.projects[i].subtitle}</h6>
               <p className="card-text">{this.portfolio_json.projects[i].description}<a href={this.portfolio_json.projects[i].projectlink ? this.portfolio_json.projects[i].projectlink : undefined} style={this.portfolio_json.projects[i].projectlink==""?{display:'none'}:{}} target="_blank" title='View Project' className="card-link stretched-link">

@@ -8,38 +8,57 @@
         },
         "headerinfo":{
             "designationinfo":{
-                "jobtitle": "Associate Software Developer",
+                "jobtitle": "Software Developer 2",
                 "currentcompany": "Oracle"
             },
             "extraheader": "Computer Science Graduate"
         },
         "aboutme":[
-            "I am Computer Science Graduate(2016-2020 batch) from Malaviya National Institute of Technology(MNIT, Jaipur), India. Currently I am working as Full Stack Developer for Oracle Financial Services Software(OFSS), India.",
-            "I am a Fast learner and Strong Analytical thinker with problem solving skills. I have handled multiple tasks under pressure by help of my organized way of working. The good thing - which my team members always appreciate for :),  is my perfection in task finishing and development which is very less pron to errors. I have worked on many technologies including Microservices with SpringBoot, Flexible RESTful APIs, DevOps, Natural Language Processing, Deep Learning etc."
+            "I am Computer Science Graduate (2016-2020 batch) from Malaviya National Institute of Technology (MNIT, Jaipur), India. Currently I am working as Full Stack Developer for Oracle Financial Services Software (OFSS), India.",
+            "I am a Fast learner and Strong Analytical thinker with problem solving skills. I have handled multiple tasks under pressure by help of my organized way of working. The good thing - which my team members always appreciate for :),  is my perfection in task finishing and development which is very less prone to errors. I have worked on many technologies including Microservices with Spring Boot, Flexible RESTful APIs, DevOps, Natural Language Processing, Deep Learning etc."
         ],
         "experience":[
             {
-                "designation":"Associate Software Developer",
+                
                 "organisation": "Oracle Financial Services Software(OFSS)",
-                "durationdisplay":"Sept 2020 - Present . 1 Year 9 Months",
-                "joblocation": "Bengaluru, Karnataka, India",
-                "workexp":[
-                    "Working on DevOps: Maintaining the job scheduling service provided to applications in different flavors on Docker and Kubernetes.",
-                    "Stable Developmnet(Backend and Frontend): Dealing with job scheduling service for different applications at the same time, ensuring product's stability. Reduced tech-debt by resolving a high number of bugs and providing useful enhancements within existing service.",
-                    "UI Developemnt: Designed a few rich User Interfaces using OJET and refined the existing UI's to more rich and user friendly. The major difficulty was to make these UI faster and robust, which I successfully accompolished in very less span of time.",
-                    "NLP: Developed a user-friendly multi-label text classification web application using NLP concepts and Oracle JavaScript Extension Toolkit(OJET)."
+                "totaldurationdisplay":"Full-time . 2 Years 1 Month",
+                "workhistory":[
+                    {
+                        "designation":"Software Developer 2",
+                        "durationdisplay":"Sept 2022- Present . 1 Month",
+                        "joblocation": "Bengaluru, Karnataka, India",
+                        "workexp":[
+                            ]
+                    },
+                    {
+                        "designation":"Associate Software Developer",
+                        "durationdisplay":"Sept 2020 - Sept 2022 . 2 Years 1 Month",
+                        "joblocation": "Bengaluru, Karnataka, India",
+                        "workexp":[
+                            "Working on DevOps: Maintaining the job scheduling service provided to applications in different flavours on Docker and Kubernetes.",
+                            "Stable Development (Backend and Frontend): Dealing with job scheduling service for different applications at the same time, ensuring product's stability. Reduced tech-debt by resolving a high number of bugs and providing useful enhancements within existing service.",
+                            "UI Development: Designed a few rich User Interfaces using OJET and refined the existing UIs to richer and user friendly. The major difficulty was to make these UI faster and robust, which I successfully accomplished in very less span of time.",
+                            "NLP: Developed a user-friendly multi-label text classification web application using NLP concepts and Oracle JavaScript Extension Toolkit (OJET)."
+                        ]
+                    }
                 ],
                 "logo": "ofss_logo.jpg"
             },
             {
-                "designation":"Summer Intern",
+                
                 "organisation": "Dreams InfoSoft Technology Pvt Ltd.",
-                "durationdisplay":"June 2020 - July 2020 . 2 Months",
-                "joblocation": "Jaipur, Rajasthan, India",
-                "workexp":[
-                    "Worked on Image preprocessing and Computer Vision for Real time Person identification and action recognition.",
-                    "Developed an Python GUI based attendence system by using conventional image processing methods for face detection and recognition.",
-                    "Worked on different time series forecasting methods(ARIMA, SARIMA, Prophet etc.) for sales forecasting."
+                "totaldurationdisplay":"June 2020 - July 2020 . 2 Months",
+                "workhistory":[
+                  {
+                    "designation":"Summer Intern",
+                    "durationdisplay":"June 2020 - July 2020 . 2 Months",
+                    "joblocation": "Jaipur, Rajasthan, India",
+                    "workexp":[
+                        "Worked on Image pre-processing and Computer Vision for Real time Person identification and action recognition.",
+                        "Developed a Python GUI based attendance system by using conventional image processing methods for face detection and recognition.",
+                        "Worked on different time series forecasting methods (ARIMA, SARIMA, Prophet etc.) for sales forecasting."
+                    ]
+                  }  
                 ],
                 "logo": "dreamsoft_logo.jpg"
             }
@@ -123,7 +142,7 @@
                     "Bootstrap",
                     "GIT"
                 ],
-                "description": "Basic portfolio UI which is a reusable template based web app, and can be reused just by changing the template and adding the required images.",
+                "description": "Basic portfolio UI which is a reusable template-based web app, and can be reused just by changing the template and adding the required images.",
                 "projectlink": "https://github.com/tibra27/portfolio/tree/master"
             },
             {
@@ -135,7 +154,7 @@
                     "CSS",
                     "JavaScript"
                 ],
-                "description": "A server-based recognition engine in which I implemented speech to text functionality using SpeechRecognition API in javascript.",
+                "description": "A server-based recognition engine in which I implemented speech to text functionality using SpeechRecognition API in JavaScript.",
                 "projectlink": "https://github.com/tibra27/SpeechRecognition"
             },
             {
@@ -222,7 +241,7 @@
                 "logo": "rss.png",
                 "achievements":[
                     "School topper in Secondary Examination 2013.",
-                    "Achieved Laptop for being in top 0.01% students in merit list from Rajasthan Government."
+                    "Awarded with Laptop for being in top 0.01% students in merit list from Rajasthan Government."
                 ]
             }
         ],
