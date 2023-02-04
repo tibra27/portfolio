@@ -21,19 +21,25 @@
             {
                 
                 "organisation": "Oracle Financial Services Software(OFSS)",
-                "totaldurationdisplay":"Full-time . 2 Years 1 Month",
+                "totaldurationdisplayLabel":"Full-time . ",
+                "workStartDate": "09/01/2020",
+                "workEndDate":"ongoing",
                 "workhistory":[
                     {
                         "designation":"Software Developer 2",
-                        "durationdisplay":"Sept 2022- Present . 1 Month",
+                        "durationdisplayLabel":"Sept 2022- Present . ",
                         "joblocation": "Bengaluru, Karnataka, India",
+                        "workStartDate": "09/01/2022",
+                        "workEndDate":"ongoing",
                         "workexp":[
                             ]
                     },
                     {
                         "designation":"Associate Software Developer",
-                        "durationdisplay":"Sept 2020 - Sept 2022 . 2 Years 1 Month",
+                        "durationdisplayLabel":"Sept 2020 - Sept 2022 . ",
                         "joblocation": "Bengaluru, Karnataka, India",
+                        "workStartDate": "09/01/2020",
+                        "workEndDate":"09/01/2022",
                         "workexp":[
                             "Working on DevOps: Maintaining the job scheduling service provided to applications in different flavours on Docker and Kubernetes.",
                             "Stable Development (Backend and Frontend): Dealing with job scheduling service for different applications at the same time, ensuring product's stability. Reduced tech-debt by resolving a high number of bugs and providing useful enhancements within existing service.",
@@ -47,12 +53,16 @@
             {
                 
                 "organisation": "Dreams InfoSoft Technology Pvt Ltd.",
-                "totaldurationdisplay":"June 2020 - July 2020 . 2 Months",
+                "totaldurationdisplayLabel":"June 2020 - July 2020 . ",
+                "workStartDate": "06/01/2020",
+                "workEndDate":"07/31/2020",
                 "workhistory":[
                   {
                     "designation":"Summer Intern",
-                    "durationdisplay":"June 2020 - July 2020 . 2 Months",
+                    "durationdisplayLabel":"June 2020 - July 2020 . ",
                     "joblocation": "Jaipur, Rajasthan, India",
+                    "workStartDate": "06/01/2020",
+                    "workEndDate":"07/31/2020",
                     "workexp":[
                         "Worked on Image pre-processing and Computer Vision for Real time Person identification and action recognition.",
                         "Developed a Python GUI based attendance system by using conventional image processing methods for face detection and recognition.",

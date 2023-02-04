@@ -9,6 +9,68 @@ class Detail extends React.Component {
       this.onClickFn = props.onClick;
       this.userface = require('./images/'+this.portfolio_json.usericon);
       this.aboutmeparas = [];
+      this.dateDifference = function(endingDate, startingDate){
+
+        let startDate = new Date(new Date(startingDate).toISOString().substr(0, 10));
+        if ('ongoing' === endingDate) {
+          endingDate = new Date().toISOString().substr(0, 10); // need date in YYYY-MM-DD format
+        }
+        let endDate = new Date(endingDate);
+        if (startDate > endDate) {
+          const swap = startDate;
+          startDate = endDate;
+          endDate = swap;
+        }
+        const startYear = startDate.getFullYear();
+        const february = (startYear % 4 === 0 && startYear % 100 !== 0) || startYear % 400 === 0 ? 29 : 28;
+        const daysInMonth = [31, february, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        let yearDiff = endDate.getFullYear() - startYear;
+        let monthDiff = endDate.getMonth() - startDate.getMonth();
+        if (monthDiff < 0) {
+          yearDiff--;
+          monthDiff += 12;
+        }
+        let dayDiff = endDate.getDate() - startDate.getDate();
+        if (dayDiff < 0) {
+          if (monthDiff > 0) {
+            monthDiff--;
+          } else {
+            yearDiff--;
+            monthDiff = 11;
+          }
+          dayDiff += daysInMonth[startDate.getMonth()];
+        }
+        let years = yearDiff;
+        let months = monthDiff;
+        //return yearDiff + 'Y ' + monthDiff + 'M ' + dayDiff + 'D';
+        if(years === 0){
+          if(months === 1){
+            return months + ' Month';
+          }else{
+            return months + ' Months';
+          }
+        }else if(years === 1){
+          if(months ===0){
+            return years + ' Year';
+          }else if(months === 1){
+            return years + ' Year ' + months + ' Month';
+          }else{
+            return years + ' Year ' + months + ' Months';
+          }
+        }else{
+          if(months ===0){
+            return years + ' Years';
+          }else if(months === 1){
+            return years + ' Years ' + months + ' Month';
+          }else{
+            return years + ' Years ' + months + ' Months';
+          }
+        }
+
+        
+      }
+
       for(var i=0; i<this.portfolio_json.aboutme.length; i++){
         this.aboutmeparas.push(<p key={i} className='fs-5'>{this.portfolio_json.aboutme[i]}</p>);
       }
@@ -31,9 +93,11 @@ class Detail extends React.Component {
             workhistory.push(
                  <><span className='d-block fs-5 text-black'>
                 <span className='fas fa-id-badge me-2'></span>
-                {this.portfolio_json.experience[i].workhistory[j].designation}</span><span className='d-block fs-6 text-muted'>
+                {this.portfolio_json.experience[i].workhistory[j].designation}</span>
+                <span className='d-block fs-6 text-muted'>
                   <span className='fas fa-business-time me-2'></span>
-                  {this.portfolio_json.experience[i].workhistory[j].durationdisplay}</span><span className='d-block fs-6 text-muted'>
+                  {this.portfolio_json.experience[i].workhistory[j].durationdisplayLabel + this.dateDifference(this.portfolio_json.experience[i].workhistory[j].workEndDate, this.portfolio_json.experience[i].workhistory[j].workStartDate)}</span>
+                  <span className='d-block fs-6 text-muted'>
                   <span className='fas fa-location-dot me-2'></span>
                   {this.portfolio_json.experience[i].workhistory[j].joblocation}</span>
                   </>
@@ -51,7 +115,7 @@ class Detail extends React.Component {
           if(this.portfolio_json.experience[i].workhistory.length > 1){
             totaldurationdisplay.push(
               <span className='d-block fs-6 mb-1 text-muted'>
-                {this.portfolio_json.experience[i].totaldurationdisplay}
+                {this.portfolio_json.experience[i].totaldurationdisplayLabel + this.dateDifference(this.portfolio_json.experience[i].workEndDate,this.portfolio_json.experience[i].workStartDate)}
               </span>
             );
           }
