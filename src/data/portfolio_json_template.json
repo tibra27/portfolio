@@ -53,16 +53,16 @@
             {
                 
                 "organisation": "Dreams InfoSoft Technology Pvt Ltd.",
-                "totaldurationdisplayLabel":"June 2020 - July 2020 . ",
-                "workStartDate": "06/01/2020",
-                "workEndDate":"07/31/2020",
+                "totaldurationdisplayLabel":"June 2019 - July 2019 . ",
+                "workStartDate": "06/01/2019",
+                "workEndDate":"07/31/2019",
                 "workhistory":[
                   {
                     "designation":"Summer Intern",
-                    "durationdisplayLabel":"June 2020 - July 2020 . ",
+                    "durationdisplayLabel":"June 2019 - July 2019 . ",
                     "joblocation": "Jaipur, Rajasthan, India",
-                    "workStartDate": "06/01/2020",
-                    "workEndDate":"07/31/2020",
+                    "workStartDate": "06/01/2019",
+                    "workEndDate":"07/31/2019",
                     "workexp":[
                         "Worked on Image pre-processing and Computer Vision for Real time Person identification and action recognition.",
                         "Developed a Python GUI based attendance system by using conventional image processing methods for face detection and recognition.",
